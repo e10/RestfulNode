@@ -18,14 +18,12 @@ router.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'APIKEY');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    console.log('Something is happening.');
+    console.log('Something is happening.',req.url);
     next(); // make sure we go to the next routes and don't stop here
 });
 
 /** Initialize Passport.js **/
 app.use(Passport.initialize());
-
-
 
 /** ROUTER DECLARATION STARTS HERE **/
 

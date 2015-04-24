@@ -21,12 +21,14 @@ mongoose.connect('mongodb://' + Config.host + '/' + Config.database);
 app.use(logger('dev'));
 /** load the body parser middleware **/
 
+app.use(bodyParser.json());
 /** load the url endoers middleware **/
 app.use(bodyParser.urlencoded({ extended: true }));
 /** load the cookie parser middleware **/
 app.use(cookieParser());
 /** Initialize Passport.js **/
 app.use(passport.initialize());
+app.use(express.static(path.join(__dirname, 'static')));
 
 /** Router file declaration **/
 var router = require('./app/routers');

@@ -1,0 +1,36 @@
+<div style="margin-top:50px;" ng-controller="AccountCtrl" class="col-lg-offset-3 col-md-6">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Sign Up</div>
+            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a ui-sref="login">Sign In</a></div>
+        </div>
+        <div style="padding-top:30px" class="panel-body">
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">Username</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="user.username" name="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">Email</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="user.email" name="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">Password</label>
+                <div class="col-md-9">
+                    <input type="password" class="form-control" ng-model="user.password" name="password" placeholder="Password">
+                </div>
+            </div>
+            
+            <div class="col-md-12 form-group">
+                <div class="col-md-3">
+                    <button class="btn btn-info" ng-click="signup(user)" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
