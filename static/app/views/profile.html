@@ -1,0 +1,28 @@
+<div style="margin-top:50px;" ng-controller="UserCtrl" class="col-lg-offset-3 col-md-6">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Profile</div>
+        </div>
+        <div style="padding-top:30px" class="panel-body">
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">Username</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="user.username" name="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">Email</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" ng-model="user.email" name="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                <div class="col-md-3">
+                    <button class="btn btn-info" ng-click="updateUser(user)" type="submit">Update Profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

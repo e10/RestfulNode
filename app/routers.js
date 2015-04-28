@@ -3,14 +3,14 @@
 **/
 var express     = require('express'),
     Passport    = require('passport'),
-    Auth        = require('./Component/Auth'),  
+    Auth        = require('./Component/Auth'),
     GCM         = require('./Component/GCM'),
     APNS        = require('./Component/APN'),
     User        = require('./Controller/UsersController'),
     app         = express();
 
 /** Created an instance of the express Router **/
-var router = express.Router(); 
+var router = express.Router();
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
@@ -39,7 +39,7 @@ router.route('/login')
   .post(Auth.isAuthenticated, User.login);
 
 router.route('/logout')
-  .get(Auth.isAuthenticated, User.login);
+  .get(Auth.isAuthenticated, User.logout);
 
 router.route('/users')
   .post(Auth.isAuthenticated, User.postUsers)

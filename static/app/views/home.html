@@ -1,0 +1,6 @@
+<div ng-controller="HomeCtrl">
+    <h1>Home</h1>
+    <p>Welcome {{user.username}}</p>
+    <a class="btn btn-info" href="#/{{user._id}}/profile">Profile</a>
+    <button class="btn btn-danger" ng-click="logout(user)" type="submit">Logout</button>
+</div>
